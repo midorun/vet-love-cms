@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_reception_reception_times",
+  "info": {
+    "displayName": "receptionTime"
+  },
+  "options": {},
+  "attributes": {
+    "time": {
+      "type": "time"
+    },
+    "available": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

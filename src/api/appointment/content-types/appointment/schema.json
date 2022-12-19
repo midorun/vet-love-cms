@@ -12,22 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "clientId": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::client.client",
-      "inversedBy": "appointmentsIds"
-    },
     "petId": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::pet.pet"
-    },
-    "doctorId": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::doctor.doctor",
-      "inversedBy": "appointmentsIds"
     },
     "services": {
       "type": "json",
@@ -41,6 +29,18 @@
     "sum": {
       "type": "integer",
       "required": false
+    },
+    "clientId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "appointments"
+    },
+    "doctorId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::doctor.doctor",
+      "inversedBy": "appointment"
     }
   }
 }

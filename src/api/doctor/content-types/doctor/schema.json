@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "specialty": {
-      "type": "string",
-      "required": true
-    },
     "experience": {
       "type": "integer",
       "required": true
@@ -45,11 +41,36 @@
       "target": "api::review.review",
       "mappedBy": "doctor"
     },
-    "appointmentsIds": {
+    "appointment": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appointment.appointment",
       "mappedBy": "doctorId"
+    },
+    "speciality": {
+      "type": "enumeration",
+      "enum": [
+        "Терапия",
+        "Кардиология",
+        "Стоматология",
+        "Груминг",
+        "Хирургия",
+        "Офтольмология",
+        "Травмотология",
+        "Онкология"
+      ],
+      "required": true,
+      "default": "Терапия"
+    },
+    "receptionDay": {
+      "displayName": "receptionHours",
+      "type": "component",
+      "repeatable": true,
+      "component": "reception.reception-hours",
+      "private": true
+    },
+    "reception": {
+      "type": "json"
     }
   }
 }

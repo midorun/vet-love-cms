@@ -56,18 +56,13 @@
       "target": "api::review.review",
       "inversedBy": "client"
     },
-    "appointments": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::appointment.appointment"
-    },
     "pets": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pet.pet",
       "mappedBy": "clientId"
     },
-    "appointmentsIds": {
+    "appointments": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appointment.appointment",

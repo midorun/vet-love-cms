@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_therapy_reception_hours",
+  "info": {
+    "displayName": "Day",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "timeStart": {
+      "type": "time"
+    },
+    "timeEnd": {
+      "type": "time"
+    }
+  }
+}
