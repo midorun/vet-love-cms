@@ -66,8 +66,7 @@
       "displayName": "receptionHours",
       "type": "component",
       "repeatable": true,
-      "component": "reception.reception-hours",
-      "private": true
+      "component": "reception.reception-hours"
     },
     "reception": {
       "type": "json"
