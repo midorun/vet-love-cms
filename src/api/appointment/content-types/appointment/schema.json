@@ -41,6 +41,9 @@
       "relation": "manyToOne",
       "target": "api::doctor.doctor",
       "inversedBy": "appointment"
+    },
+    "guestInfo": {
+      "type": "json"
     }
   }
 }
