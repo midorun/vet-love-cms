@@ -26,7 +26,7 @@
       "required": true
     },
     "dateOfBirth": {
-      "type": "datetime",
+      "type": "date",
       "required": true
     },
     "weight": {
@@ -36,8 +36,8 @@
     "gender": {
       "type": "enumeration",
       "enum": [
-        "male",
-        "female"
+        "MALE",
+        "FEMALE"
       ],
       "required": true
     },
@@ -52,11 +52,57 @@
         "audios"
       ]
     },
-    "clientId": {
+    "castrated": {
+      "type": "enumeration",
+      "enum": [
+        "YES",
+        "NO"
+      ],
+      "default": "NO",
+      "required": true
+    },
+    "healthFeatures": {
+      "type": "json"
+    },
+    "healthFeaturesCustom": {
+      "type": "text"
+    },
+    "chip": {
+      "type": "biginteger"
+    },
+    "lastCheckDate": {
+      "type": "date"
+    },
+    "lastComplexVaccinationDate": {
+      "type": "date"
+    },
+    "lastRabiesVaccinationDate": {
+      "type": "date"
+    },
+    "lastDewormingDate": {
+      "type": "date"
+    },
+    "lastTreatmentOfFleasDate": {
+      "type": "date"
+    },
+    "owner": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::client.client",
+      "target": "plugin::users-permissions.user",
       "inversedBy": "pets"
+    },
+    "lastAppointmentDate": {
+      "type": "date"
+    },
+    "analyses": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

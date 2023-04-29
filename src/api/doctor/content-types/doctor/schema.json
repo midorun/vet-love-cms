@@ -17,11 +17,11 @@
       "required": true
     },
     "experience": {
-      "type": "integer",
+      "type": "decimal",
       "required": true
     },
     "rating": {
-      "type": "integer",
+      "type": "decimal",
       "required": true
     },
     "avatar": {
@@ -35,19 +35,13 @@
         "audios"
       ]
     },
-    "reviews": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::review.review",
-      "mappedBy": "doctor"
-    },
     "appointment": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::appointment.appointment",
       "mappedBy": "doctorId"
     },
-    "speciality": {
+    "specialty": {
       "type": "enumeration",
       "enum": [
         "Терапия",
@@ -70,6 +64,11 @@
     },
     "reception": {
       "type": "json"
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "doctor.review"
     }
   }
 }

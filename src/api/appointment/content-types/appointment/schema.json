@@ -21,7 +21,7 @@
       "type": "json",
       "required": false
     },
-    "time": {
+    "date": {
       "type": "datetime",
       "required": false,
       "unique": true
@@ -29,12 +29,6 @@
     "sum": {
       "type": "integer",
       "required": false
-    },
-    "clientId": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::client.client",
-      "inversedBy": "appointments"
     },
     "doctorId": {
       "type": "relation",
@@ -44,6 +38,15 @@
     },
     "guestInfo": {
       "type": "json"
+    },
+    "userId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
