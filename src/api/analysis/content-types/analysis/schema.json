@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analyses",
+  "info": {
+    "singularName": "analysis",
+    "pluralName": "analyses",
+    "displayName": "Analyses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

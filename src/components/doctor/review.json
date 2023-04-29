@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_doctor_reviews",
+  "info": {
+    "displayName": "review",
+    "description": "",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "rate": {
+      "type": "integer"
+    },
+    "text": {
+      "type": "text"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
