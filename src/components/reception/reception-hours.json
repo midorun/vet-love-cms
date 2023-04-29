@@ -1,7 +1,7 @@
 {
   "collectionName": "components_therapy_reception_hours",
   "info": {
-    "displayName": "Day",
+    "displayName": "ReceptionDay",
     "description": ""
   },
   "options": {},
@@ -10,10 +10,12 @@
       "type": "date"
     },
     "timeStart": {
-      "type": "time"
+      "type": "time",
+      "default": "09:00"
     },
     "timeEnd": {
-      "type": "time"
+      "type": "time",
+      "default": "20:30"
     }
   }
 }
