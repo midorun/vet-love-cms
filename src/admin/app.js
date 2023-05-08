@@ -17,7 +17,7 @@ const config = {
     // 'pl',
     // 'pt-BR',
     // 'pt',
-    // 'ru',
+    'ru',
     // 'sk',
     // 'sv',
     // 'th',
@@ -27,6 +27,11 @@ const config = {
     // 'zh-Hans',
     // 'zh',
   ],
+  translations: {
+    ru: {
+      "content-type-builder.plugin.name": "Типы контента"
+    }
+  }
 };
 
 const bootstrap = (app) => {
